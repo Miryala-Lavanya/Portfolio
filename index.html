@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miryala Lavanya Portfolio</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        /* Navbar */
+        #mainNavbar {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: 0.3s ease-in-out;
+    padding: 12px 0;
+    z-index: 9999;
+}
+
+/* Scroll effect */
+#mainNavbar.scrolled {
+    background: #7B2FF7;
+    transition: background 0.3s;
+}
+
+#mainNavbar.scrolled .nav-link,
+#mainNavbar.scrolled .navbar-brand {
+    color: white !important;
+}
+
+/* Default links (before click) */
+.nav-link {
+    color: #000 !important;
+    transition: color 0.3s;
+}
+
+/* Hover state */
+.nav-link:hover {
+    color: #7B2FF7 !important;
+}
+
+/* Active after click */
+.nav-link.active {
+    color: #7B2FF7 ;
+    font-weight: 400;
+    
+}
+
+
+
+
+        /* Hero */
+        .hero-section {
+            background: linear-gradient(120deg, #f7e8ff, #fff, #f4dfff);
+            padding: 140px 0 100px;
+        }
+        .hero-title { font-size: 56px; font-weight: 700; }
+        .hero-title span { color: #7B2FF7; }
+        .hero-sub { color: #7B2FF7; font-size: 20px; font-weight: 600; }
+        .profile-pic {
+    display: block;             /* Make it a block element for centering */
+    margin: 0 auto;             /* Center horizontally */
+    border-radius: 50%;         /* Circular shape */
+    border: 3px solid white;    /* White border */
+    width: 250px; 
+    height: 250px;
+          /* Cover the container */
+    box-shadow: 0 0 25px rgba(155, 80, 255, 0.6); /* Brighter glow */
+    
+    /* Make image look brighter */
+    filter: brightness(1.2) contrast(1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional hover effect for more interactivity */
+.profile-pic:hover {
+    transform: scale(1.05);  /* Slight zoom on hover */
+    box-shadow: 0 0 35px rgba(155, 80, 255, 0.8); /* Brighter glow on hover */
+}
+
+        .year-badge {
+            background: #FFD23F;
+            font-weight: 800;
+            padding: 18px;
+            border-radius: 50%;
+            position: absolute;
+            right: 19%;
+            top: 8%;color: white;
+        }
+
+        /* About Section */
+        #about { padding: 100px 0; }
+        .edu-card {
+            border-radius: 18px;
+            border: 1px solid rgba(123,47,247,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+        <a class="navbar-brand" href="#home">Lavanya</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item "><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-section" id="home">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-6">
+                <h1 class="hero-title">Hello, I'm <br><span>Miryala Lavanya</span></h1>
+                <p class="hero-sub">Aspiring Software Developer</p>
+                <p>Passionate about building digital experiences & solving real-world problems through code.</p>
+                <div class="mt-4 d-flex gap-3">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline-primary">Contact Me</a>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center position-relative">
+                <span class="year-badge">2025</span>
+                <img src="../frntend-html/images/passphoto.jpeg" class="profile-pic">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1>About <span style="color:#7B2FF7;">Me</span></h1>
+            <p>Learn more about my education & background</p>
+        </div>
+
+        <!-- Row for side by side layout -->
+        <div class="row g-4 align-items-start">
+
+            <!-- Professional Background -->
+            <div class="col-lg-6">
+                <h3>Professional Background</h3>
+                <p>Miryala Lavanya is a passionate and motivated Computer Science graduate with strong interest in modern software development.</p>
+
+                <!-- Buttons -->
+                <!-- Resume Download Button with Tooltip -->
+                  <a href="./images/Lavanya Miryala Resume .pdf" class="btn btn-primary mt-3 me-2" download data-bs-toggle="tooltip" data-bs-placement="top" 
+                       title="Download my resume"> <i class="bi bi-download"></i> Download Resume
+                  </a>
+
+                  <!-- Resume View Button -->
+
+
+                <button class="btn btn-secondary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#resumeCollapse" aria-expanded="false" aria-controls="resumeCollapse">
+                    <i class="bi bi-eye"></i> View Resume
+                </button>
+
+                <!-- Collapse Section -->
+                <div class="collapse mt-3" id="resumeCollapse">
+                    <div class="card card-body">
+                        <iframe src="./images/Lavanya Miryala Resume .pdf#toolbar=0" width="100%" height="500px"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="col-lg-6">
+                <div class="card shadow p-4 edu-card h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-1 text-primary"></i>
+                        <h4 class="ms-3 mb-0 fw-bold">Education</h4>
+                    </div>
+
+                    <!-- Popover -->
+                    <button class="btn btn-outline-primary  mb-3"
+                        data-bs-toggle="popover" data-bs-title="Academic Highlights"
+                        data-bs-content="Distinction throughout academics with strong technical foundation.">
+                        View Highlights
+                    </button>
+
+                    <hr>
+
+                    <!-- B.Tech -->
+                    <h5 class="fw-bold">B.Tech in CSE</h5>
+                    <p>
+                        <a href="#" data-bs-toggle="tooltip" title="Affiliated to JNTUH"
+                           class="text-primary text-decoration-none fw-semibold">
+                            Teegala Krishna Reddy Engineering College, Hyderabad
+                        </a>
+                    </p>
+                    <p class="text-muted mb-1">Graduated: 2025</p>
+                    <span class="badge bg-info border w-50">Computer Science Engineering</span>
+                    <span class="badge bg-success text-light ms-2 w-25 mt-3">CGPA: 8.91</span>
+                    <span style="font-size: 14px;color: #FFD23F;font-weight: bold;margin: 4px;">2021 - 2025</span>
+
+                    <hr>
+
+                    <!-- Previous Education Collapse -->
+                    <p class="fw-semibold">Previous Education
+                        <button class="btn btn-sm btn-primary ms-2" data-bs-toggle="collapse" data-bs-target="#eduCollapse">
+                            View Details
+                        </button>
+                    </p>
+
+                    <div id="eduCollapse" class="collapse">
+                        <ul class="list-group border-0">
+                            <li class="list-group-item border-0">
+                                <strong>Intermediate (XII)</strong><br>
+                                Narayana Junior College, Hyderabad<br>
+                                <span class="text-success fw-semibold">Percentage: 96%</span>
+                                <span style="font-size: 14px; color: #FFD23F;font-weight: bold;margin: 4px;">2019 - 2021</span>
+                            </li>
+                            <li class="list-group-item border-0">
+                                <strong>High School (X)</strong><br>
+                                Varun’s Model High School, Hyderabad<br>
+                                <span class="text-success fw-semibold">CGPA: 10/10</span>
+                                <span style="font-size: 14px;color: #FFD23F;font-weight: bold;margin: 4px;">2018 - 2019</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section id="experience" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1>Experience & Training</h1>
+            <p>Professional work, internships, and certifications</p>
+        </div>
+
+        <!-- Carousel for Experience -->
+        <div id="experienceCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+
+                  <!-- Item 1: Java Developer Intern -->
+                <div class="carousel-item active">
+                    <div class="card shadow p-4 mx-auto" style="max-width:600px;">
+                        <h5 class="fw-bold">Java Developer Intern</h5>
+                        <p class="text-muted mb-1">TNS India Foundation</p>
+                        <span class="badge bg-success text-light">2019 – 2021</span>
+                        <ul class="mt-2">
+                            <li>Built RESTful APIs using Spring Boot.</li>
+                            <li>Used Maven for dependency management and MySQL for backend integration.</li>
+                            <li>Gained practical experience in enterprise Java development.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item 2: Python Intern -->
+                <div class="carousel-item ">
+                    <div class="card shadow p-4 mx-auto" style="max-width:600px;">
+                        <h5 class="fw-bold">Python Programming Intern</h5>
+                        <p class="text-muted mb-1">Internshala</p>
+                        <span class="badge bg-primary text-light">Nov 2021 - May 2025</span>
+                        <ul class="mt-2">
+                            <li>Learned Python fundamentals and OOPS principles. </li>
+                            <li>Developed GUI applications using PyQT.</li>
+                            <li>Applied Python to real-world scenarios and problem-solving.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+
+                <!-- Item 3: Certifications -->
+                <div class="carousel-item">
+                    <div class="card shadow p-4 mx-auto" style="max-width:600px;">
+                        <h5 class="fw-bold">Certifications</h5>
+                        <p class="text-muted mb-1">Various Trainings</p>
+                        <span class="badge bg-warning text-dark">2018 – 2019</span>
+                        <ul class="mt-2">
+                            <li>Programming with Python - Internshala Trainings</li>
+                            <li>Advanced Data Analytics - Edunet Foundation</li>
+                            <li>Java Full Stack Development - TNS Foundation</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#experienceCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#experienceCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1><strong>My</strong> <span style="color: #7B2FF7;"><strong>Projects</strong></span></h1>
+            <p>Showcasing technical projects that demonstrate my programming skills and problem-solving abilities</p>
+        </div>
+
+        <div class="row g-4 text-center">
+            <!-- Project 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow h-100 p-3">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-eye-fill fs-1 text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Mouse Cursor Control Using Eye Gaze</h5>
+                        <span class="badge bg-info mb-2">Mini Project</span>
+                        <p class="card-text text-muted">
+                            An innovative hands-free computer interaction system using webcam-based eye gaze tracking technology.
+                        </p>
+                        <h6>Key Features:</h6>
+                        <ul class="text-start">
+                            <li>Real-time eye gaze detection using webcam</li>
+                            <li>Accurate cursor movement based on eye position</li>
+                            <li>Hands-free computer interaction system</li>
+                            <li>User-friendly calibration process</li>
+                        </ul>
+                        <span class="badge bg-primary" data-bs-toggle="tooltip" title="Python + OpenCV">Tech</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow h-100 p-3">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-phone-fill fs-1 text-success"></i>
+                        </div>
+                        <h5 class="card-title">Ride Sharing Platform</h5>
+                        <span class="badge bg-info mb-2">Major Project</span>
+                        <p class="card-text text-muted">
+                            A modern ride-sharing platform with user-friendly interface for efficient booking and management.
+                        </p>
+                        <h6>Key Features:</h6>
+                        <ul class="text-start">
+                            <li>Secure user authentication and authorization</li>
+                            <li>Real-time ride booking and tracking</li>
+                            <li>Payment integration and management</li>
+                            <li>Driver and passenger management system</li>
+                        </ul>
+                        <span class="badge bg-success" data-bs-toggle="tooltip" title="Blockchain +Smart Contract + Solidity + React">Tech</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow h-100 p-3">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-database-fill fs-1 text-primary"></i>
+                        </div>
+                        <h5 class="card-title">College Placement Management System</h5>
+                        <span class="badge bg-info mb-2">TNS India Foundation - Training</span>
+                        <p class="card-text text-muted">
+                            A comprehensive web application for managing college placement activities with database integration and user interface.
+                        </p>
+                        <h6>Key Features:</h6>
+                        <ul class="text-start">
+                            <li>Complete CRUD operations for placement data</li>
+                            <li>RESTful API endpoints for all functionalities</li>
+                            <li>Database optimization for better performance</li>
+                            <li>API testing and documentation with POSTMAN</li>
+                        </ul>
+                        <span class="badge bg-warning" data-bs-toggle="tooltip" title="Java + Spring Boot + MySQL + RestAPIs">Tech</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1>Skills & Interests</h1>
+        </div>
+<!-- Technical Skills -->
+<h3 class="text-center mb-4">Technical Skills</h3>
+<div class="row g-4 mb-5">
+
+    <!-- Programming Languages -->
+    <div class="col-md-4">
+        <div class="card p-4 shadow-sm text-center h-100">
+            <i class="bi bi-code-slash fs-2 mb-2 text-primary"></i>
+            <h5 class="mb-3">Programming Languages</h5>
+            
+            <div class="mb-3 text-start">
+                <p class="mb-1">Java <span class="float-end" data-bs-toggle="tooltip" title="Proficient">75%</span></p>
+                <div class="progress" style="height:6px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width:0%" data-bs-width="75%"></div>
+                </div>
+            </div>
+
+            <div class="mb-3 text-start">
+                <p class="mb-1">Python <span class="float-end" data-bs-toggle="tooltip" title="Advanced">80%</span></p>
+                <div class="progress" style="height:6px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width:0%" data-bs-width="80%"></div>
+                </div>
+            </div>
+
+            <div class="text-start">
+                <p class="mb-1">SQL <span class="float-end" data-bs-toggle="tooltip" title="Advanced">80%</span></p>
+                <div class="progress" style="height:6px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width:0%" data-bs-width="80%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Web Technologies -->
+    <div class="col-md-4">
+        <div class="card p-4 shadow-sm text-center h-100">
+            <i class="bi bi-browser-chrome fs-2 mb-2 text-success"></i>
+            <h5 class="mb-3">Web Technologies</h5>
+            
+            <div class="mb-3 text-start">
+                <p class="mb-1">HTML <span class="float-end" data-bs-toggle="tooltip" title="Expert">90%</span></p>
+                <div class="progress" style="height:6px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width:0%" data-bs-width="90%"></div>
+                </div>
+            </div>
+
+            <div class="mb-3 text-start">
+                <p class="mb-1">CSS <span class="float-end" data-bs-toggle="tooltip" title="Advanced">80%</span></p>
+                <div class="progress" style="height:6px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width:0%" data-bs-width="80%"></div>
+                </div>
+            </div>
+
+            <div class="text-start">
+                <p class="mb-1">JavaScript <span class="float-end" data-bs-toggle="tooltip" title="Intermediate">75%</span></p>
+                <div class="progress" style="height:6px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width:0%" data-bs-width="75%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frameworks & Tools -->
+    <div class="col-md-4">
+        <div class="card p-4 shadow-sm text-center h-100">
+            <i class="bi bi-tools fs-2 mb-2 text-warning"></i>
+            <h5 class="mb-3">Frameworks & Tools</h5>
+            
+            <div class="mb-3 text-start">
+                <p class="mb-1">Spring Boot <span class="float-end" data-bs-toggle="tooltip" title="Advanced">85%</span></p>
+                <div class="progress" style="height:6px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width:0%" data-bs-width="85%"></div>
+                </div>
+            </div>
+
+            <div class="text-start">
+                <p class="mb-1">Bootstrap <span class="float-end" data-bs-toggle="tooltip" title="Advanced">90%</span></p>
+                <div class="progress" style="height:6px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width:0%" data-bs-width="90%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional: Animate Progress Bars on Scroll -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const bars = document.querySelectorAll('.progress-bar');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                const bar = entry.target;
+                bar.style.width = bar.getAttribute('data-bs-width');
+            }
+        });
+    }, { threshold: 0.5 });
+
+    bars.forEach(bar => observer.observe(bar));
+
+    // Initialize tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el))
+});
+</script>
+
+<!-- Soft Skills -->
+<h3 class="text-center mb-4">Soft Skills</h3>
+<div class="row g-4">
+    <div class="col-md-3 col-6">
+        <div class="card p-3 shadow-sm text-center">
+            <i class="bi bi-lightbulb fs-2 mb-2 text-primary"></i>
+            <h6>Analytical Thinking</h6>
+            <p class="text-muted small">Ability to analyze situations, identify patterns, and make informed decisions.</p>
+        </div>
+    </div>
+    <div class="col-md-3 col-6">
+        <div class="card p-3 shadow-sm text-center">
+            <i class="bi bi-tools fs-2 mb-2 text-success"></i>
+            <h6>Problem Solving</h6>
+            <p class="text-muted small">Effectively tackle challenges with logical reasoning and creative solutions.</p>
+        </div>
+    </div>
+    <div class="col-md-3 col-6">
+        <div class="card p-3 shadow-sm text-center">
+            <i class="bi bi-people fs-2 mb-2 text-warning"></i>
+            <h6>Team Collaboration</h6>
+            <p class="text-muted small">Work well with others, sharing ideas and supporting team goals efficiently.</p>
+        </div>
+    </div>
+    <div class="col-md-3 col-6">
+        <div class="card p-3 shadow-sm text-center">
+            <i class="bi bi-arrow-repeat fs-2 mb-2 text-danger"></i>
+            <h6>Adaptability</h6>
+            <p class="text-muted small">Quickly adjust to changes and learn new technologies or methods.</p>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</section>
+
+
+
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1>Let's Start a Conversation</h1>
+      <p>I'm always interested in hearing about new opportunities, especially Software Developer and Associate Software Engineer positions.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Left: Contact Info -->
+      <div class="col-lg-5">
+        <div class="list-group mb-4">
+
+          <div class="list-group-item contact-box d-flex align-items-center mb-3 shadow-sm rounded">
+            <i class="bi bi-envelope-fill fs-6 text-white bg-primary p-2 rounded-circle me-3"></i>
+            <div>
+              <h6 class="mb-0">Email</h6>
+              <small>lavanyamiryala03@gmail.com</small>
+            </div>
+          </div>
+
+          <div class="list-group-item contact-box d-flex align-items-center mb-3 shadow-sm rounded">
+            <i class="bi bi-telephone-fill fs-6 text-white bg-success p-2 rounded-circle me-3"></i>
+            <div>
+              <h6 class="mb-0">Phone</h6>
+              <small>+91 9392776602</small>
+            </div>
+          </div>
+
+          <div class="list-group-item contact-box d-flex align-items-center mb-3 shadow-sm rounded">
+            <i class="bi bi-geo-alt-fill fs-6 text-white bg-danger p-2 rounded-circle me-3"></i>
+            <div>
+              <h6 class="mb-0">Location</h6>
+              <small>Hyderabad, India</small>
+            </div>
+          </div>
+
+          <div class="list-group-item contact-box d-flex align-items-center shadow-sm rounded">
+            <i class="bi bi-linkedin fs-6 text-white bg-primary p-2 rounded-circle me-3"></i>
+            <div>
+              <h6 class="mb-0">LinkedIn</h6>
+              <small>
+                <a href="https://linkedin.com/in/miryala-lavanya-941317314" target="_blank">
+                  linkedin.com/in/miryala-lavanya-941317314
+                </a>
+              </small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="col-lg-7">
+        <div class="card shadow-sm p-4">
+          <form id="contactForm">
+
+            <div class="mb-3">
+              <label class="form-label">Your Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Enter your full name" required
+                     data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Please enter your name">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter your email" required
+                     data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Valid email required">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea id="message" rows="5" class="form-control" placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button type="submit" id="sendBtn" class="btn btn-primary w-100" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Click to send your message">
+              <span id="btnText"><i class="bi bi-send-fill me-2"></i>Send Message</span>
+              <span id="btnLoader" class="spinner-border spinner-border-sm d-none"></span>
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS MODAL -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <i class="bi bi-check-circle-fill text-success fs-1 animate__animated animate__zoomIn"></i>
+        <h5 class="mt-3">Message Sent!</h5>
+        <p>I’ll get back to you shortly. Thank you for contacting me!</p>
+        <button class="btn btn-primary mt-2" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="py-4 text-center" style="background:#7B2FF7;color:white;">
+    <p class="mb-0">© 2025 Miryala Lavanya | All Rights Reserved</p>
+    <small>Made with ❤️ for my career journey</small>
+</footer>
+
+<!-- JS & EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  emailjs.init({ publicKey: "D6XbJw681FH-B32Se" });
+
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(t => new bootstrap.Tooltip(t));
+  document.querySelectorAll('[data-bs-toggle="popover"]').forEach(t => new bootstrap.Popover(t));
+
+  const form = document.getElementById("contactForm");
+  const btnText = document.getElementById("btnText");
+  const btnLoader = document.getElementById("btnLoader");
+
+
+  <!--Get input elements-->
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    btnText.classList.add("d-none");
+    btnLoader.classList.remove("d-none");
+
+    const params = {
+      name: nameInput.value,
+      email: emailInput.value,
+      to_email: "lavanyamiryala03@gmail.com",
+      message: messageInput.value
+    };
+
+    emailjs.send("service_yo47y9p", "template_5lyxp4i", params)
+      .then(() => {
+        new bootstrap.Modal(document.getElementById("contactModal")).show();
+        form.reset();
+      })
+      .catch(() => alert("Message failed. Try again."))
+      .finally(() => {
+        btnText.classList.remove("d-none");
+        btnLoader.classList.add("d-none");
+      });
+  });
+});
+
+
+</script>
+
+
+</body>
+</html>
