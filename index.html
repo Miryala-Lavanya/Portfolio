@@ -94,14 +94,26 @@ body, h2, h3, h4, h5, h6, p, a, span, li, button, label {
 }
 
         .year-badge {
-            background: #FFD23F;
-            font-weight: 800;
-            padding: 18px;
-            border-radius: 50%;
-            position: absolute;
-            right: 19%;
-            top: 8%;color: white;
-        }
+    background: #FFD23F;
+    font-weight: 800;
+    padding: 18px;
+    border-radius: 50%;
+    position: absolute;
+    right: 19%;
+    top: 8%;
+    color: white;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .year-badge {
+        padding: 12px;       /* smaller badge */
+        right: 10%;          /* adjust position */
+        top: 5%;             /* adjust position */
+        font-size: 14px;     /* optional: smaller text */
+    }
+}
+
 
         /* About Section */
         #about { padding: 100px 0; }
